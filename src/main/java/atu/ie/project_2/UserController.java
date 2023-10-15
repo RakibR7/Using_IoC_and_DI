@@ -15,16 +15,14 @@ public class UserController {
     }
 
     //@PostMapping("/registerUser/{name}/{email}")
-    @PostMapping("/registerUser")
+    @PostMapping("/users")
     @ResponseStatus(HttpStatus.CREATED)
-    public String registerUser(@RequestBody UserDetails userDetails){     //we want a post request
-        // Pass the extracted name and email to the UserService
-        //System.out.println("User ID: "+user.getUserName());
-        //System.out.println("User ID: "+user.getEmail());
-
-        userService.registerUser(userDetails);
-        //return "User registered! " + name + " " + email;
-        return "User registered! Name: " + userDetails.getName() + ", Email: " + userDetails.getEmail();
+    public UserDetails registerUser(@RequestBody UserDetails userDetails) {
+        //userService.registerUser(userDetails);
+        //"User registered! Name: " + userDetails.getName() + ", Email: " + userDetails.getEmail()
+        System.out.println("User ID: "+userDetails.getName() );
+        System.out.println("User ID: "+userDetails.getEmail() );
+        return userDetails;
     }
 }
 
