@@ -12,8 +12,11 @@ public class UserService {
         this.emailService = emailService;
     }
 
-    public void registerUser(String username, String email) {
+    public void registerUser(UserDetails userDetails) {
         //logic
+        String username = userDetails.getName();
+        String email = userDetails.getEmail();
         emailService.sendEmail(email, "Welcome to out platform");
     }
 }
+
