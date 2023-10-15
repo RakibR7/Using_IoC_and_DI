@@ -19,7 +19,7 @@ public class UserController {
     {
         // Pass the extracted name and email to the UserService
         userService.registerUser(name, email);
-        return "User registered successfully!";
+        return "User registered successfully!" + name + email;
     }
 }
 

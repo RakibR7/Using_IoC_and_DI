@@ -14,7 +14,6 @@ public class UserService {
 
     public void registerUser(String username, String email) {
         //logic
-        //cpnfiramtion
         emailService.sendEmail(email, "Welcome to out platform");
     }
 }
