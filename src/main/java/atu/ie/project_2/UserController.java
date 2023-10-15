@@ -7,20 +7,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
 public class UserController {
-    private final UserController emailService;
+    private final UserService userService;
 
     @Autowired
-    public UserController(UserController emailService) {
-        this.emailService = emailService;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
-    @GetMapping ("registerUser/{name}/{email}")
-    public String UserDetails(@PathVariable String name, @PathVariable String email) {
-        return UserDetails(name, email);
-    }
-
-    public void registerUser(String username, String email){
-        emailService.registerUser(email, "Welcome to our platform");
+    @GetMapping("/registerUser/{name}/{email}")
+    public String registerUser(@PathVariable String name, @PathVariable String email)
+    {
+        // Pass the extracted name and email to the UserService
+        userService.registerUser(name, email);
+        return "User registered successfully!";
     }
 }
 

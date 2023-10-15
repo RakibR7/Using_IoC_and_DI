@@ -1,9 +1,8 @@
 package atu.ie.project_2;
 
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Data
 @NoArgsConstructor
