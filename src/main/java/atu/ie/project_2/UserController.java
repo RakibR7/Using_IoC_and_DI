@@ -14,14 +14,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    //@PostMapping("/registerUser/{name}/{email}")
     @PostMapping("/users")
     @ResponseStatus(HttpStatus.CREATED)
     public UserDetails registerUser(@RequestBody UserDetails userDetails) {
-        //userService.registerUser(userDetails);
         //"User registered! Name: " + userDetails.getName() + ", Email: " + userDetails.getEmail()
-        System.out.println("User ID: "+userDetails.getName() );
-        System.out.println("User ID: "+userDetails.getEmail() );
+        System.out.println("User ID: "+userDetails.getName());
+        System.out.println("User ID: "+userDetails.getEmail());
         return userDetails;
     }
 }

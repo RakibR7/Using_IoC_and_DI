@@ -7,5 +7,7 @@ public class EmailService {
     public void sendEmail(String to, String message) {
         //message = "Thank you " + to + " for nothing";
         String mMessage = "Thank you " + to + " for nothing";
+        System.out.println(mMessage);
+
     }
 }

@@ -16,7 +16,7 @@ public class UserService {
 
         //String username = userDetails.getName();
         //String email = userDetails.getEmail();
-        emailService.sendEmail(email, "Welcome to out platform");
+        emailService.sendEmail(email , "Welcome to out platform");
     }
 }
 
