@@ -5,18 +5,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    private final EmailService emailService;
+    private EmailService emailService;
 
     @Autowired
-    public UserService(EmailService emailService) {
-        this.emailService = emailService;
+    public UserService() {
+        this.emailService = new EmailService();
     }
-
-    public void registerUser(String name, String email) {
-
-        //String username = userDetails.getName();
-        //String email = userDetails.getEmail();
-        emailService.sendEmail(email , "Welcome to out platform");
+    public void registerUser(String name, String email){
+        emailService.sendEmail("Welcome to our platform ", name +"/n "+ email);
     }
 }
-

@@ -1,9 +1,10 @@
 package atu.ie.project_2;
 
+
+/*
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-
 
 @Data
 @NoArgsConstructor
@@ -13,28 +14,31 @@ public class UserDetails {
     private String email;
 }
 
+*/
 
 
-
-
-
-/*
 public class UserDetails {
-    public String getName;
-    public Object getEmail;
+    private String name;
+    private String email;
 
-    public UserDetails(String getName, Object getEmail) {
-        this.getName = getName;
-        this.getEmail = getEmail;
+    public UserDetails(String name, String email) {
+        this.name = name;
+        this.email = email;
     }
 
-    public String getOperation() {
-        return getName;
+    public String getName() {
+        return name;
     }
 
-    public Object getTotal() {
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        return getEmail;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
-*/
